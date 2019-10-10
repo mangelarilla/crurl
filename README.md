@@ -4,7 +4,7 @@
 
 Simplified http client, made with Rust!
 
-```bash
+```
 crurl 0.1.0
 Simplified http client
 
