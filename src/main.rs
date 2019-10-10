@@ -1,9 +1,12 @@
 use structopt::StructOpt;
 use reqwest::Error;
 
-/// Simplified rust version of curl
+/// Simplified http client
 #[derive(StructOpt)]
 struct Opt {
+	/// Response headers only
+	#[structopt(short, long)]
+	headers_only: bool,
     /// The target url to request
     url: String,
 }
@@ -14,9 +17,13 @@ fn main() -> Result<(), Error> {
     let client = reqwest::Client::new();
     let request = client.get(&args.url[..]);
 
-    let response = request.send()?;
+    let mut response = request.send()?;
 
     println!("{:?}", response);
+
+    if !args.headers_only {
+	    println!("Body: {}", response.text().unwrap());
+    }
 
     Ok(())
 }
