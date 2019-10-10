@@ -1,4 +1,4 @@
-# rurl
+# crurl
 
 Simplified http client, made with Rust!
 
@@ -8,4 +8,4 @@ Just via cargo for now...
 
 ### Cargo
 
-Get rustup installed locally and then run `cargo install rurl`, which will download the binary package from crates.io ready to use
+Get [rustup](https://rustup.rs) installed locally and then run `cargo install crurl`, which will download the binary package from [crates.io](https://crates.io) ready to use

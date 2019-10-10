@@ -1,13 +1,13 @@
 [package]
-name = "rurl"
+name = "crurl"
 version = "0.1.0"
 authors = ["marilla"]
 edition = "2018"
 license = "MIT"
 description = "Simplified http client"
 readme = "README.md"
-homepage = "https://github.com/mangelarilla/rurl"
-repository = "https://github.com/mangelarilla/rurl"
+homepage = "https://github.com/mangelarilla/crurl"
+repository = "https://github.com/mangelarilla/crurl"
 keywords = ["http-client"]
 categories = ["command-line-utilities"]
 
