@@ -1,4 +1,6 @@
-# crurl
+[![crates.io](https://img.shields.io/crates/v/crurl)](https://crates.io/crates/crurl)
+
+# crurl 
 
 Simplified http client, made with Rust!
 
