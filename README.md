@@ -4,6 +4,22 @@
 
 Simplified http client, made with Rust!
 
+```bash
+crurl 0.1.0
+Simplified http client
+
+USAGE:
+    crurl [FLAGS] <url>
+
+FLAGS:
+        --help            Prints help information
+    -h, --headers-only    Response headers only
+    -V, --version         Prints version information
+
+ARGS:
+    <url>    The target url to request
+```
+
 ## Installation
 
 Just via cargo for now...
