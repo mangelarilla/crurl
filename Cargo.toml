@@ -2,7 +2,7 @@
 name = "crurl"
 version = "0.1.0"
 authors = ["marilla"]
-edition = "2018"
+edition = "2021"
 license = "MIT"
 description = "Simplified http client"
 readme = "README.md"
@@ -14,5 +14,6 @@ categories = ["command-line-utilities"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-structopt = "0.3.2"
-reqwest = "0.9.21"
+structopt = "0.3"
+reqwest = "0.11"
+tokio = { version = "1", features = ["full"] }
