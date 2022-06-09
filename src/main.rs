@@ -1,5 +1,3 @@
-use reqwest::header::HeaderMap;
-use std::fmt::{Display, Formatter};
 use structopt::StructOpt;
 
 #[tokio::main]
@@ -18,7 +16,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let response = request.send().await?;
 
-    println!("Headers: {}", PrettyHeaders::new(&response.headers()));
+    println!("Headers: {:#?}", response.headers());
 
     if !args.headers_only {
         println!("Body: {}", response.text().await.unwrap());
@@ -41,26 +39,4 @@ struct Opt {
     put: bool,
     /// The target url to request
     url: String,
-}
-
-struct PrettyHeaders<'a> {
-    headers: &'a HeaderMap,
-}
-
-impl PrettyHeaders<'_> {
-    fn new(headers: &HeaderMap) -> PrettyHeaders {
-        PrettyHeaders { headers }
-    }
-}
-
-impl Display for PrettyHeaders<'_> {
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        writeln!(f)?;
-        for (name, value) in self.headers {
-            if let Ok(value) = value.to_str() {
-                writeln!(f, "{}: {}", name, value)?
-            }
-        }
-        Ok(())
-    }
 }
