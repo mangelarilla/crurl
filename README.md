@@ -5,16 +5,23 @@
 Simplified http client, made with Rust!
 
 ```
-crurl 0.1.0
+crurl 0.2.0
 Simplified http client
 
 USAGE:
-    crurl [FLAGS] <url>
+    crurl [FLAGS] [OPTIONS] <url>
 
 FLAGS:
         --help            Prints help information
     -h, --headers-only    Response headers only
+        --post            Request with POST verb
+        --put             Request with PUT verb
+    -s, --show-request    Display the request
     -V, --version         Prints version information
+
+OPTIONS:
+    -B, --body <body>             Set request body
+    -H, --headers <headers>...    Set request headers. Ex: "Accept=*/*"
 
 ARGS:
     <url>    The target url to request
